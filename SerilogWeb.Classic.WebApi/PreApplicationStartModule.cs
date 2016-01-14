@@ -3,7 +3,7 @@ using System.Web.Http.ExceptionHandling;
 
 namespace SerilogWeb.Classic.WebApi
 {
-    class PreApplicationStartModule
+    public class PreApplicationStartModule
     {
         public static void Register()
         {
