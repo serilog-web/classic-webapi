@@ -11,6 +11,8 @@ namespace SerilogWeb.Classic.WebApi.Test.Controllers
             return new string[] { "value1", "value2" };
         }
 
+        [Route("api/values/shouldthrowexception")]
+        [HttpGet]
         public string ShouldThrowException()
         {
             throw new SyntheticException(nameof(ShouldThrowException));
