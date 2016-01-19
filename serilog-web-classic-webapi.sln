@@ -3,14 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogWeb.Classic.WebApi", "SerilogWeb.Classic.WebApi\SerilogWeb.Classic.WebApi.csproj", "{A0C38DC7-1D9F-4D0C-8EFA-CEEE34FCA188}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogWeb.Classic.WebApi.Test", "SerilogWeb.Classic.WebApi.Test\SerilogWeb.Classic.WebApi.Test.csproj", "{F6EA68EE-432C-414D-8451-67B274FEA5F3}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{06F15C5E-4564-4257-9E40-C1FBD5A26CB8}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogWeb.Classic.WebApi", "src\SerilogWeb.Classic.WebApi\SerilogWeb.Classic.WebApi.csproj", "{A0C38DC7-1D9F-4D0C-8EFA-CEEE34FCA188}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogWeb.Classic.WebApi.Test", "test\SerilogWeb.Classic.WebApi.Test\SerilogWeb.Classic.WebApi.Test.csproj", "{F6EA68EE-432C-414D-8451-67B274FEA5F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AF1B47E8-4D83-4DD6-8D10-69A791F886F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{20BE9067-F8FD-47C3-9016-43A4690FA825}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,5 +33,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A0C38DC7-1D9F-4D0C-8EFA-CEEE34FCA188} = {AF1B47E8-4D83-4DD6-8D10-69A791F886F0}
+		{F6EA68EE-432C-414D-8451-67B274FEA5F3} = {20BE9067-F8FD-47C3-9016-43A4690FA825}
 	EndGlobalSection
 EndGlobal
