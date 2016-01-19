@@ -1,31 +1,10 @@
-<?xml version="1.0"?>
-<package >
-  <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>SerilogWeb contributors</owners>
-    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
-    <projectUrl>https://github.com/serilog-web/classic-webapi</projectUrl>
-    <iconUrl>http://serilog-web.github.io/pages/images/serilog-web.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
-    <copyright>Copyright 2016</copyright>
-    <dependencies>
-        <dependency id="Serilog" version="1.5.7" />
-    </dependencies>
-    <tags>serilog logging aspnet</tags>
-  </metadata>
-</package>
 <?xml version="1.0" encoding="utf-8" ?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>SerilogWeb.Classic</id>
+    <id>SerilogWeb.Classic.WebApi</id>
     <version>$version$</version>
     <authors>SerilogWeb Contributors</authors>
-    <description>Logs details of System.Web HTTP requests through Serilog.</description>
+    <description>Adds WebAPI exception logging to SerilogWeb.Classic</description>
     <language>en-US</language>
     <projectUrl>http://github.com/serilog-web/classic-webapi</projectUrl>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
