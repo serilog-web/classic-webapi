@@ -5,11 +5,9 @@ namespace SerilogWeb.Classic.WebApi
 {
     public class WebApiExceptionLogger : ExceptionLogger
     {
-        
         public override void Log(ExceptionLoggerContext context)
         {
             HttpContext.Current.AddError(context.Exception);
         }
-
     }
 }
