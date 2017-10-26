@@ -2,6 +2,7 @@
 using Owin;
 using Serilog;
 using Serilog.Events;
+using Serilog.Formatting.Json;
 using SerilogWeb.Classic.WebApi.Enrichers;
 
 [assembly: OwinStartup(typeof(SerilogWeb.Classic.WebApi.Test.Startup))]
@@ -20,7 +21,7 @@ namespace SerilogWeb.Classic.WebApi.Test
                 .WriteTo.Observers(
                     observable => { observable.Subscribe(new DummyLogger()); }
                     , LogEventLevel.Error)
-                .WriteTo.Trace(outputTemplate: "{Message} - {Properties}{NewLine}{Exception}")
+                .WriteTo.Trace(new JsonFormatter())
                 .CreateLogger();
         }
     }

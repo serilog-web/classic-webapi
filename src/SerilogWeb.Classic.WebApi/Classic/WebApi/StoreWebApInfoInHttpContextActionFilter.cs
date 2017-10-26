@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
@@ -32,7 +31,7 @@ namespace SerilogWeb.Classic.WebApi
             var controllerName = actionDescriptor.ControllerDescriptor.ControllerName;
 
             var routeTemplate = routeData.Route.RouteTemplate;
-            var routeDataDictionary = new ReadOnlyDictionary<string, object>( routeData.Values);
+            var routeDataDictionary = new Dictionary<string, object>( routeData.Values);
 
             var contextualInfo =
                 new Dictionary<WebApiRequestInfoKey, object>

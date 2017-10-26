@@ -11,7 +11,7 @@
         }
 
         public WebApiRouteDataEnricher(string propertyName, bool destructureObjects = false)
-            : base(WebApiRequestInfoKey.RouteUrlTemplate, propertyName, destructureObjects)
+            : base(WebApiRequestInfoKey.RouteData, propertyName, destructureObjects)
         {
         }
     }
