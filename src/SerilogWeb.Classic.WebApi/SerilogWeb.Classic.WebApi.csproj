@@ -79,8 +79,13 @@
     <Compile Include="..\..\assets\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Classic\WebApi\Constants.cs" />
+    <Compile Include="Classic\WebApi\Enrichers\HttpContextCurrent.cs" />
+    <Compile Include="Classic\WebApi\Enrichers\WebApiUrlTemplateEnricher.cs" />
     <Compile Include="Classic\WebApi\PreApplicationStartModule.cs" />
+    <Compile Include="Classic\WebApi\StoreWebApInfoInHttpContext.cs" />
     <Compile Include="Classic\WebApi\WebApiExceptionLogger.cs" />
+    <Compile Include="Classic\WebApi\WebApiRequestInfoKey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +93,7 @@
     <None Include="SerilogWeb.Classic.WebApi.nuspec" />
     <None Include="SerilogWeb.snk" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
