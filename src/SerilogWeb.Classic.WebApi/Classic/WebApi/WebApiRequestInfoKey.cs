@@ -8,8 +8,9 @@ namespace SerilogWeb.Classic.WebApi
 {
     enum WebApiRequestInfoKey
     {
-        UrlTemplate,
         ActionName,
-        ControllerName
+        ControllerName,
+        RouteUrlTemplate,
+        RouteData
     }
 }

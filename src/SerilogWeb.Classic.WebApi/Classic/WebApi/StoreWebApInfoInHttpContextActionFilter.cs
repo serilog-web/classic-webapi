@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
@@ -21,28 +22,33 @@ namespace SerilogWeb.Classic.WebApi
             return base.OnActionExecutingAsync(actionContext, cancellationToken);
         }
 
-        public override Task OnActionExecutedAsync(HttpActionExecutedContext actionExecutedContext, CancellationToken cancellationToken)
-        {
-            return base.OnActionExecutedAsync(actionExecutedContext, cancellationToken);
-        }
 
         private static void StoreWebApInfoInHttpContext(HttpActionContext actionContext)
         {
-            var actionName = actionContext.ActionDescriptor.ActionName;
-            var controllerName = actionContext.ActionDescriptor.ControllerDescriptor.ControllerName;
-            var urlTemplate = actionContext.RequestContext.RouteData.Route.RouteTemplate;
+            var actionDescriptor = actionContext.ActionDescriptor;
+            var routeData = actionContext.RequestContext.RouteData;
+
+            var actionName = actionDescriptor.ActionName;
+            var controllerName = actionDescriptor.ControllerDescriptor.ControllerName;
+
+            var routeTemplate = routeData.Route.RouteTemplate;
+            var routeDataDictionary = new ReadOnlyDictionary<string, object>( routeData.Values);
 
             var contextualInfo =
                 new Dictionary<WebApiRequestInfoKey, object>
                 {
-                    [WebApiRequestInfoKey.UrlTemplate] = urlTemplate,
+                    [WebApiRequestInfoKey.RouteUrlTemplate] = routeTemplate,
+                    [WebApiRequestInfoKey.RouteData] = routeDataDictionary,
                     [WebApiRequestInfoKey.ActionName] = actionName,
                     [WebApiRequestInfoKey.ControllerName] = controllerName
                 };
 
             var currentHttpContext = HttpContext.Current;
-            currentHttpContext.Items[Constants.WebApiContextInfoKey] = contextualInfo;
-
+            if (currentHttpContext != null)
+            {
+                currentHttpContext.Items[Constants.WebApiContextInfoKey] = contextualInfo;
+            }
+            
         }
     }
 }

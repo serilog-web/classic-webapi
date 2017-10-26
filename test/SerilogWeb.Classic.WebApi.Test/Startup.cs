@@ -19,7 +19,10 @@ namespace SerilogWeb.Classic.WebApi.Test
         {
             SelfLog.Out = Console.Out;
             Serilog.Log.Logger = new LoggerConfiguration()
-                .Enrich.With<WebApiUrlTemplateEnricher>()
+                .Enrich.With<WebApiRouteTemplateEnricher>()
+                .Enrich.With<WebApiControllerNameEnricher>()
+                .Enrich.With<WebApiRouteDataEnricher>()
+                .Enrich.With<WebApiActionNameEnricher>()
                 .WriteTo.Observers(
                     observable => { observable.Subscribe(new DummyLogger()); }
                     , LogEventLevel.Error)

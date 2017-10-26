@@ -80,8 +80,11 @@
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Classic\WebApi\Constants.cs" />
-    <Compile Include="Classic\WebApi\Enrichers\HttpContextCurrent.cs" />
-    <Compile Include="Classic\WebApi\Enrichers\WebApiUrlTemplateEnricher.cs" />
+    <Compile Include="Classic\WebApi\Enrichers\WebApiActionNameEnricher.cs" />
+    <Compile Include="Classic\WebApi\Enrichers\BaseWebApiContextInfoEnricher.cs" />
+    <Compile Include="Classic\WebApi\Enrichers\WebApiControllerNameEnricher.cs" />
+    <Compile Include="Classic\WebApi\Enrichers\WebApiRouteDataEnricher.cs" />
+    <Compile Include="Classic\WebApi\Enrichers\WebApiRouteTemplateEnricher.cs" />
     <Compile Include="Classic\WebApi\PreApplicationStartModule.cs" />
     <Compile Include="Classic\WebApi\StoreWebApInfoInHttpContextActionFilter.cs" />
     <Compile Include="Classic\WebApi\WebApiExceptionLogger.cs" />
