@@ -41,17 +41,11 @@
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Serilog, Version=1.5.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Serilog.1.5.7\lib\net45\Serilog.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Serilog.2.5.0\lib\net45\Serilog.dll</HintPath>
     </Reference>
-    <Reference Include="Serilog.FullNetFx, Version=1.5.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Serilog.1.5.7\lib\net45\Serilog.FullNetFx.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SerilogWeb.Classic, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9462ddd55fbc0e7f, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SerilogWeb.Classic.2.0.6\lib\net45\SerilogWeb.Classic.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="SerilogWeb.Classic, Version=3.0.0.0, Culture=neutral, PublicKeyToken=9462ddd55fbc0e7f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SerilogWeb.Classic.3.0.20\lib\net45\SerilogWeb.Classic.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -79,8 +73,16 @@
     <Compile Include="..\..\assets\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Classic\WebApi\Constants.cs" />
+    <Compile Include="Classic\WebApi\Enrichers\WebApiActionNameEnricher.cs" />
+    <Compile Include="Classic\WebApi\Enrichers\BaseWebApiContextInfoEnricher.cs" />
+    <Compile Include="Classic\WebApi\Enrichers\WebApiControllerNameEnricher.cs" />
+    <Compile Include="Classic\WebApi\Enrichers\WebApiRouteDataEnricher.cs" />
+    <Compile Include="Classic\WebApi\Enrichers\WebApiRouteTemplateEnricher.cs" />
     <Compile Include="Classic\WebApi\PreApplicationStartModule.cs" />
+    <Compile Include="Classic\WebApi\StoreWebApInfoInHttpContextActionFilter.cs" />
     <Compile Include="Classic\WebApi\WebApiExceptionLogger.cs" />
+    <Compile Include="Classic\WebApi\WebApiRequestInfoKey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +90,7 @@
     <None Include="SerilogWeb.Classic.WebApi.nuspec" />
     <None Include="SerilogWeb.snk" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

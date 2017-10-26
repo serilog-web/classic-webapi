@@ -10,9 +10,5 @@
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <iconUrl>http://serilog-web.github.io/pages/images/serilog-web.png</iconUrl>
     <tags>serilog logging aspnet</tags>
-    <dependencies>
-      <dependency id="Serilog" version="1.5.14" />
-      <dependency id="SerilogWeb.Classic" version="2.0.2" />
-    </dependencies>
   </metadata>
 </package>

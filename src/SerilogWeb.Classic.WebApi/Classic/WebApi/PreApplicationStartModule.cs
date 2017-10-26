@@ -9,6 +9,7 @@ namespace SerilogWeb.Classic.WebApi
         {
             GlobalConfiguration.Configuration.Services.Add(typeof(IExceptionLogger),
                 new WebApiExceptionLogger());
+            GlobalConfiguration.Configuration.Filters.Add(new StoreWebApInfoInHttpContextActionFilter());
         }
     }
 }
