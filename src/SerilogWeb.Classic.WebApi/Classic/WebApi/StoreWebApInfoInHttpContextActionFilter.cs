@@ -7,7 +7,7 @@ using System.Web.Http.Filters;
 
 namespace SerilogWeb.Classic.WebApi
 {
-    public class StoreWebApInfoInHttpContextActionFilter : ActionFilterAttribute
+    internal class StoreWebApInfoInHttpContextActionFilter : ActionFilterAttribute
     {
         public override void OnActionExecuting(HttpActionContext actionContext)
         {
