@@ -24,6 +24,10 @@ namespace SerilogWeb.Classic.WebApi
 
         private static void StoreWebApInfoInHttpContext(HttpActionContext actionContext)
         {
+            var currentHttpContext = HttpContext.Current;
+            if (currentHttpContext == null)
+                return;
+
             var actionDescriptor = actionContext.ActionDescriptor;
             var routeData = actionContext.RequestContext.RouteData;
 
@@ -31,7 +35,7 @@ namespace SerilogWeb.Classic.WebApi
             var controllerName = actionDescriptor.ControllerDescriptor.ControllerName;
 
             var routeTemplate = routeData.Route.RouteTemplate;
-            var routeDataDictionary = new Dictionary<string, object>( routeData.Values);
+            var routeDataDictionary = new Dictionary<string, object>(routeData.Values);
 
             var contextualInfo =
                 new Dictionary<WebApiRequestInfoKey, object>
@@ -42,12 +46,7 @@ namespace SerilogWeb.Classic.WebApi
                     [WebApiRequestInfoKey.ControllerName] = controllerName
                 };
 
-            var currentHttpContext = HttpContext.Current;
-            if (currentHttpContext != null)
-            {
-                currentHttpContext.Items[Constants.WebApiContextInfoKey] = contextualInfo;
-            }
-            
+            currentHttpContext.Items[Constants.WebApiContextInfoKey] = contextualInfo;
         }
     }
 }
