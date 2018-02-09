@@ -6,9 +6,9 @@
     <authors>SerilogWeb Contributors</authors>
     <description>Adds WebAPI exception logging to SerilogWeb.Classic</description>
     <language>en-US</language>
-    <projectUrl>http://github.com/serilog-web/classic-webapi</projectUrl>
-    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
-    <iconUrl>http://serilog-web.github.io/pages/images/serilog-web.png</iconUrl>
-    <tags>serilog logging aspnet</tags>
+    <projectUrl>https://github.com/serilog-web/classic-webapi</projectUrl>
+    <licenseUrl>https://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <iconUrl>https://serilog-web.github.io/pages/images/serilog-web.png</iconUrl>
+    <tags>serilog logging aspnet webapi</tags>
   </metadata>
 </package>
