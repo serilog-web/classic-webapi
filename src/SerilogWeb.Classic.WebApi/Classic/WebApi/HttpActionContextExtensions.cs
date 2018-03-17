@@ -1,28 +1,16 @@
-﻿using System.Collections.Generic;
-using System.Threading;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http.Controllers;
-using System.Web.Http.Filters;
 
 namespace SerilogWeb.Classic.WebApi
 {
-    internal class StoreWebApInfoInHttpContextActionFilter : ActionFilterAttribute
+    internal static class HttpActionContextExtensions
     {
-        public override void OnActionExecuting(HttpActionContext actionContext)
-        {
-            StoreWebApInfoInHttpContext(actionContext);
-            base.OnActionExecuting(actionContext);
-        }
-
-        public override Task OnActionExecutingAsync(HttpActionContext actionContext, CancellationToken cancellationToken)
-        {
-            StoreWebApInfoInHttpContext(actionContext);
-            return base.OnActionExecutingAsync(actionContext, cancellationToken);
-        }
-
-
-        private static void StoreWebApInfoInHttpContext(HttpActionContext actionContext)
+        internal static void StoreWebApInfoInHttpContext(this HttpActionContext actionContext)
         {
             var currentHttpContext = HttpContext.Current;
             if (currentHttpContext == null)
