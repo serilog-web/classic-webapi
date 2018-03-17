@@ -10,7 +10,7 @@ namespace SerilogWeb.Classic.WebApi
 {
     internal static class HttpActionContextExtensions
     {
-        public static void StoreWebApInfoInHttpContext(this HttpActionContext actionContext)
+        internal static void StoreWebApInfoInHttpContext(this HttpActionContext actionContext)
         {
             var currentHttpContext = HttpContext.Current;
             if (currentHttpContext == null)

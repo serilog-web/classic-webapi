@@ -8,7 +8,7 @@ using System.Web.Http.Filters;
 
 namespace SerilogWeb.Classic.WebApi
 {
-    public class StoreWebApInfoInHttpContextAuthenticationFilter : IAuthenticationFilter
+    internal class StoreWebApInfoInHttpContextAuthenticationFilter : IAuthenticationFilter
     {
         public bool AllowMultiple => false;
 
