@@ -18,6 +18,13 @@ namespace SerilogWeb.Classic.WebApi.Test.Controllers
             throw new SyntheticException(nameof(ShouldThrowException));
         }
 
+        [Route("api/values/shouldbeunauthorized")]
+        [HttpGet]
+        [StoreWebApInfoInHttpContextAuthorizeFilter]
+        public void ShouldBeUnauthorized()
+        {
+        }
+
         // GET api/values/5
         public string Get(int id)
         {
