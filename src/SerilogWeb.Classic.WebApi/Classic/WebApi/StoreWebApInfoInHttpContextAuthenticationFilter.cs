@@ -12,15 +12,15 @@ namespace SerilogWeb.Classic.WebApi
     {
         public bool AllowMultiple => false;
 
-        public async Task AuthenticateAsync(HttpAuthenticationContext context, CancellationToken cancellationToken)
+        public Task AuthenticateAsync(HttpAuthenticationContext context, CancellationToken cancellationToken)
         {
             context.ActionContext.StoreWebApInfoInHttpContext();
-            await Task.FromResult(0);
+            return Task.FromResult(0);
         }
 
-        public async Task ChallengeAsync(HttpAuthenticationChallengeContext context, CancellationToken cancellationToken)
+        public Task ChallengeAsync(HttpAuthenticationChallengeContext context, CancellationToken cancellationToken)
         {
-            await Task.FromResult(0);
+            return Task.FromResult(0);
         }
     }
 }
