@@ -20,7 +20,7 @@ namespace SerilogWeb.Classic.WebApi.Test.Controllers
 
         [Route("api/values/shouldbeunauthorized")]
         [HttpGet]
-        [StoreWebApInfoInHttpContextAuthorizeFilter]
+        [Authorize]
         public void ShouldBeUnauthorized()
         {
         }

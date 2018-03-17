@@ -81,8 +81,7 @@
     <Compile Include="Classic\WebApi\Enrichers\WebApiRouteTemplateEnricher.cs" />
     <Compile Include="Classic\WebApi\HttpActionContextExtensions.cs" />
     <Compile Include="Classic\WebApi\PreApplicationStartModule.cs" />
-    <Compile Include="Classic\WebApi\StoreWebApInfoInHttpContextAuthorizeFilter.cs" />
-    <Compile Include="Classic\WebApi\StoreWebApInfoInHttpContextActionFilter.cs" />
+    <Compile Include="Classic\WebApi\StoreWebApInfoInHttpContextAuthenticationFilter.cs" />
     <Compile Include="Classic\WebApi\WebApiExceptionLogger.cs" />
     <Compile Include="Classic\WebApi\WebApiRequestInfoKey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
