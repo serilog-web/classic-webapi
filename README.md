@@ -36,3 +36,15 @@ var log = new LoggerConfiguration()
     .Enrich.With(new WebApiRouteTemplateEnricher("RouteTemplate")
     .CreateLogger();
 ```
+
+## Authorization
+In Web Api, authorization filters execute before action filters. If a request is unauthorized, the action filters are not processed.
+An authorize filter attribute is available which adds enricher support in the event that the request is unauthorized. You can use this directly:
+```csharp
+[SerilogWeb.Classic.WebApi.StoreWebApInfoInHttpContextAuthorizeFilter]
+public void Get()
+{
+}
+```
+
+Alternatively, you can create your own Authorize filter attribute which inherits from ```SerilogWeb.Classic.WebApi.StoreWebApInfoInHttpContextAuthorizeFilter```, and use that instead.
