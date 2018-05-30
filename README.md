@@ -1,5 +1,4 @@
-# SerilogWeb.Classic.WebApi [![Build status](https://ci.appveyor.com/api/projects/status/np8pc8rde1kvj0h2/branch/master?svg=true)](https://ci.appveyor.com/project/serilog-web/classic-webapi/branch/master)
-
+# SerilogWeb.Classic.WebApi [![Build status](https://ci.appveyor.com/api/projects/status/7gscpkigas8ug48p/branch/master?svg=true)](https://ci.appveyor.com/project/serilog-web/classic-webapi-6qaab/branch/master)
 
 ASP.NET WebAPI support for [SerilogWeb.Classic](https://github.com/serilog-web/classic).
 
