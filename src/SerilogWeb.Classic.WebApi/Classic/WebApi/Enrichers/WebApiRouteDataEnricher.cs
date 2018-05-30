@@ -5,8 +5,10 @@
     /// </summary>
     public class WebApiRouteDataEnricher : BaseWebApiContextInfoEnricher
     {
+        public const string WebApiRouteDataPropertyName = "WebApiRouteData";
+
         public WebApiRouteDataEnricher()
-            : this("WebApiRouteData")
+            : this(WebApiRouteDataPropertyName)
         {
         }
 

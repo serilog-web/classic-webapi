@@ -14,10 +14,7 @@ namespace SerilogWeb.Classic.WebApi.Test
         public void Configuration(IAppBuilder app)
         {
             Serilog.Log.Logger = new LoggerConfiguration()
-                .Enrich.With<WebApiRouteTemplateEnricher>()
-                .Enrich.With<WebApiControllerNameEnricher>()
-                .Enrich.With<WebApiRouteDataEnricher>()
-                .Enrich.With<WebApiActionNameEnricher>()
+                .ReadFrom.AppSettings()
                 .WriteTo.Observers(
                     observable => { observable.Subscribe(new DummyLogger()); }
                     , LogEventLevel.Error)
