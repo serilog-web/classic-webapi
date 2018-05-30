@@ -11,3 +11,4 @@ deploy:
   skip_symbols: true
   on:
     branch: master
+    
