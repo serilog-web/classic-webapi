@@ -5,8 +5,10 @@
     /// </summary>
     public class WebApiActionNameEnricher : BaseWebApiContextInfoEnricher
     {
+        public const string WebApiActionPropertyName = "WebApiAction";
+
         public WebApiActionNameEnricher()
-            : this("WebApiAction")
+            : this(WebApiActionPropertyName)
         {
         }
 

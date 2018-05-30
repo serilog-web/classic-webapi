@@ -5,8 +5,10 @@
     /// </summary>
     public class WebApiControllerNameEnricher : BaseWebApiContextInfoEnricher
     {
+        public const string WebApiControllerPropertyName = "WebApiController";
+
         public WebApiControllerNameEnricher()
-            : this("WebApiController")
+            : this(WebApiControllerPropertyName)
         {
         }
 
