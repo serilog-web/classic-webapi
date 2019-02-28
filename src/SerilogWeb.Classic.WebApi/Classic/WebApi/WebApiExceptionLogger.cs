@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Http.ExceptionHandling;
+using SerilogWeb.Classic.Extensions;
 
 namespace SerilogWeb.Classic.WebApi
 {
@@ -7,7 +8,10 @@ namespace SerilogWeb.Classic.WebApi
     {
         public override void Log(ExceptionLoggerContext context)
         {
-            HttpContext.Current.AddError(context.Exception);
+            if (context.Exception != null)
+            {
+                HttpContext.Current.AddSerilogWebError(context.Exception);
+            }
         }
     }
 }
