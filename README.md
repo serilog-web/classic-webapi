@@ -1,5 +1,7 @@
 # SerilogWeb.Classic.WebApi [![Build status](https://ci.appveyor.com/api/projects/status/7gscpkigas8ug48p/branch/master?svg=true)](https://ci.appveyor.com/project/serilog-web/classic-webapi-6qaab/branch/master)
 
+>  **Deprecation notice:** this package is no longer maintained. The world has moved on to ASP.NET Core. Take a look at [Serilog.AspNetCore](https://github.com/serilog/serilog-aspnetcore) instead!
+
 ASP.NET WebAPI support for [SerilogWeb.Classic](https://github.com/serilog-web/classic).
 
 *Package* - <a href="https://www.nuget.org/packages/serilogweb.classic.webapi">SerilogWeb.Classic.WebApi</a> | Platforms - .NET 4.5
